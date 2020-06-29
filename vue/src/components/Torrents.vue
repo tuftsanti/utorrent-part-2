@@ -1,7 +1,7 @@
 
 <template>
   <div class="name">
-    <h2>{{ torrents.name }} - {{ torrents.size }}</h2>
+    <h2>{{ name }} {{size}}</h2>
     <div class="quantity">
       <button class="inc" @click="counter > 0 ? counter -= 1 : 0">-</button>
       <span class="quant-text">Quantity: {{ counter }}</span>
@@ -16,10 +16,10 @@
   export default {
    data() {
       return {
-        torrents: []
+        counter: 0
       }
     },
-    // props: ["name", "size"]
+    props: ["name", "size"]
   }
 </script>
 
